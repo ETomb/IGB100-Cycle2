@@ -12,6 +12,8 @@ ModelImporter:
     100008: Panel2
     100010: Screen
     100012: Screen1
+    100014: Alarm5
+    100016: AlarmHolder
     400000: //RootNode
     400002: Control_Panel
     400004: Mat
@@ -19,31 +21,51 @@ ModelImporter:
     400008: Panel2
     400010: Screen
     400012: Screen1
+    400014: Alarm5
+    400016: AlarmHolder
     2100000: Control_PanelMat
     2100002: MatMat
     2100004: Panel1Mat
     2100006: Panel2Mat
     2100008: ScreenMat
     2100010: Screen1Mat
+    2100012: Alarm5Mat
+    2100014: AlarmHolderMat
     2300000: Control_Panel
     2300002: Mat
     2300004: Panel1
     2300006: Panel2
     2300008: Screen
     2300010: Screen1
+    2300012: Alarm5
+    2300014: AlarmHolder
     3300000: Control_Panel
     3300002: Mat
     3300004: Panel1
     3300006: Panel2
     3300008: Screen
     3300010: Screen1
+    3300012: Alarm5
+    3300014: AlarmHolder
     4300000: Control_Panel
     4300002: Mat
     4300004: Panel1
     4300006: Panel2
     4300008: Screen
     4300010: Screen1
+    4300012: Alarm5
+    4300014: AlarmHolder
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Alarm5Mat
+    second: {fileID: 2100000, guid: 0f01efa0e7f60264cb665282112c976d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AlarmHolderMat
+    second: {fileID: 2100000, guid: 3351597b9e32fd742a4a7aeb7388fa2f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
