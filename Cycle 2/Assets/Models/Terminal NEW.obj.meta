@@ -11,55 +11,33 @@ ModelImporter:
     100006: group2_Terminal
     100008: Main_Screen_group2
     100010: //RootNode
-    100012: Fix
-    100014: Fix1
     400000: group2_Alarm
     400002: group2_AlarmHolder2
     400004: group2_Screen_Border
     400006: group2_Terminal
     400008: Main_Screen_group2
     400010: //RootNode
-    400012: Fix
-    400014: Fix1
     2100000: group2_AlarmMat
     2100002: group2_AlarmHolder2Mat
     2100004: group2_Screen_BorderMat
     2100006: group2_TerminalMat
     2100008: Main_Screen_group2Mat
-    2100010: FixMat
-    2100012: Fix1Mat
     2300000: group2_Alarm
     2300002: group2_AlarmHolder2
     2300004: group2_Screen_Border
     2300006: group2_Terminal
     2300008: Main_Screen_group2
-    2300010: Fix
-    2300012: Fix1
     3300000: group2_Alarm
     3300002: group2_AlarmHolder2
     3300004: group2_Screen_Border
     3300006: group2_Terminal
     3300008: Main_Screen_group2
-    3300010: Fix
-    3300012: Fix1
     4300000: group2_Alarm
     4300002: group2_AlarmHolder2
     4300004: group2_Screen_Border
     4300006: group2_Terminal
     4300008: Main_Screen_group2
-    4300010: Fix
-    4300012: Fix1
   externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Fix1Mat
-    second: {fileID: 2100000, guid: 3351597b9e32fd742a4a7aeb7388fa2f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: FixMat
-    second: {fileID: 2100000, guid: 3351597b9e32fd742a4a7aeb7388fa2f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
