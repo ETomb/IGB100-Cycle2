@@ -254,6 +254,7 @@ Transform:
   m_Children: []
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Father: {fileID: 97599975}
   m_RootOrder: 6
 =======
@@ -264,6 +265,10 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+  m_Father: {fileID: 97599975}
+  m_RootOrder: 6
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &132269440
 GameObject:
@@ -348,6 +353,7 @@ Transform:
   m_Children: []
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Father: {fileID: 97599975}
   m_RootOrder: 4
 =======
@@ -358,6 +364,10 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+  m_Father: {fileID: 97599975}
+  m_RootOrder: 4
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &132732147
 GameObject:
@@ -625,6 +635,7 @@ Prefab:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 14
 =======
       value: 25
@@ -632,6 +643,9 @@ Prefab:
 =======
       value: 24
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+      value: 14
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
       propertyPath: m_LocalScale.x
@@ -739,6 +753,9 @@ Transform:
   m_Children: []
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
   m_Father: {fileID: 97599975}
   m_RootOrder: 5
 =======
@@ -747,238 +764,6 @@ Transform:
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &381120524
-=======
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &381120524
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 12.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
-      propertyPath: m_RootOrder
-      value: 27
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.10888489
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.10888491
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.10888491
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
-      propertyPath: m_Name
-      value: Control Panel NEW (16)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
-  m_IsPrefabParent: 0
---- !u!1 &393586696
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100008, guid: ef074782a955a104d8c2a34d8ab101b8, type: 3}
-  m_PrefabInternal: {fileID: 549179083}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 393586697}
-  - component: {fileID: 393586699}
-  - component: {fileID: 393586698}
-  m_Layer: 0
-  m_Name: Main_Screen_group2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &393586697
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400008, guid: ef074782a955a104d8c2a34d8ab101b8, type: 3}
-  m_PrefabInternal: {fileID: 549179083}
-  m_GameObject: {fileID: 393586696}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 407130062}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &393586698
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300008, guid: ef074782a955a104d8c2a34d8ab101b8,
-    type: 3}
-  m_PrefabInternal: {fileID: 549179083}
-  m_GameObject: {fileID: 393586696}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: ef074782a955a104d8c2a34d8ab101b8, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &393586699
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300008, guid: ef074782a955a104d8c2a34d8ab101b8,
-    type: 3}
-  m_PrefabInternal: {fileID: 549179083}
-  m_GameObject: {fileID: 393586696}
-  m_Mesh: {fileID: 4300008, guid: ef074782a955a104d8c2a34d8ab101b8, type: 3}
---- !u!1 &407130061
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100010, guid: ef074782a955a104d8c2a34d8ab101b8, type: 3}
-  m_PrefabInternal: {fileID: 549179083}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 407130062}
-  m_Layer: 0
-  m_Name: Terminal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &407130062
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400010, guid: ef074782a955a104d8c2a34d8ab101b8, type: 3}
-  m_PrefabInternal: {fileID: 549179083}
-  m_GameObject: {fileID: 407130061}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.9, y: -0.07999998, z: 6.76}
-  m_LocalScale: {x: 0.1088849, y: 0.1088849, z: 0.1088849}
-  m_Children:
-  - {fileID: 1030134255}
-  - {fileID: 132732148}
-  - {fileID: 1038704293}
-  - {fileID: 797630154}
-  - {fileID: 393586697}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1001 &445117628
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400006, guid: 5d438634a30f66241beec7b91677dd39, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 5d438634a30f66241beec7b91677dd39, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.07999998
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 5d438634a30f66241beec7b91677dd39, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 6.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 5d438634a30f66241beec7b91677dd39, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 5d438634a30f66241beec7b91677dd39, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 5d438634a30f66241beec7b91677dd39, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 5d438634a30f66241beec7b91677dd39, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 5d438634a30f66241beec7b91677dd39, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 5d438634a30f66241beec7b91677dd39, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.1088849
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 5d438634a30f66241beec7b91677dd39, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1088849
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 5d438634a30f66241beec7b91677dd39, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.1088849
-      objectReference: {fileID: 0}
-    - target: {fileID: 400006, guid: 5d438634a30f66241beec7b91677dd39, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 5d438634a30f66241beec7b91677dd39, type: 3}
-  m_IsPrefabParent: 0
---- !u!1001 &549179083
->>>>>>> 638bdbfa5d386790b4a0c3c1c0f8013132a93d9f
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1327,6 +1112,7 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 1
 =======
   m_RootOrder: 6
@@ -1334,6 +1120,9 @@ Transform:
 =======
   m_RootOrder: 5
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+  m_RootOrder: 1
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &571892678
 GameObject:
@@ -1418,6 +1207,7 @@ Transform:
   m_Children: []
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Father: {fileID: 97599975}
   m_RootOrder: 8
 =======
@@ -1428,6 +1218,10 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+  m_Father: {fileID: 97599975}
+  m_RootOrder: 8
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &582331283
 Prefab:
@@ -1468,6 +1262,7 @@ Prefab:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 8
 =======
       value: 19
@@ -1475,6 +1270,9 @@ Prefab:
 =======
       value: 18
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+      value: 8
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
       propertyPath: m_LocalScale.x
@@ -1717,6 +1515,7 @@ Transform:
   m_Children: []
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Father: {fileID: 97599975}
   m_RootOrder: 1
 =======
@@ -1727,6 +1526,10 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+  m_Father: {fileID: 97599975}
+  m_RootOrder: 1
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &927307439
 Prefab:
@@ -1767,6 +1570,7 @@ Prefab:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 15
 =======
       value: 26
@@ -1774,6 +1578,9 @@ Prefab:
 =======
       value: 25
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+      value: 15
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
       propertyPath: m_LocalScale.x
@@ -1798,6 +1605,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
   m_IsPrefabParent: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!4 &997291412 stripped
@@ -1941,6 +1749,9 @@ GameObject:
 >>>>>>> 638bdbfa5d386790b4a0c3c1c0f8013132a93d9f
 =======
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+--- !u!4 &997291412 stripped
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400004, guid: ef074782a955a104d8c2a34d8ab101b8, type: 3}
@@ -2035,6 +1846,7 @@ Prefab:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 18
 =======
       value: 29
@@ -2042,6 +1854,9 @@ Prefab:
 =======
       value: 28
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+      value: 18
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
       propertyPath: m_LocalScale.x
@@ -2105,6 +1920,7 @@ Prefab:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0
 =======
       value: 32
@@ -2112,6 +1928,9 @@ Prefab:
 =======
       value: 31
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+      value: 0
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: efae321f8b2be2145b32632ad63716a1, type: 3}
       propertyPath: m_LocalScale.x
@@ -2139,13 +1958,13 @@ Prefab:
 <<<<<<< HEAD
 --- !u!4 &1189116424 stripped
 Transform:
-<<<<<<< HEAD
   m_PrefabParentObject: {fileID: 400010, guid: efae321f8b2be2145b32632ad63716a1, type: 3}
   m_PrefabInternal: {fileID: 1189073692}
 --- !u!4 &1256972731 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
   m_PrefabInternal: {fileID: 369921703}
+<<<<<<< HEAD
 =======
 =======
 --- !u!1 &1280787064
@@ -2187,6 +2006,8 @@ Transform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
 --- !u!1001 &1328110523
 Prefab:
   m_ObjectHideFlags: 0
@@ -2226,6 +2047,7 @@ Prefab:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 7
 =======
       value: 18
@@ -2233,6 +2055,9 @@ Prefab:
 =======
       value: 17
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+      value: 7
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
       propertyPath: m_LocalScale.x
@@ -2340,6 +2165,7 @@ Transform:
   m_Children: []
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Father: {fileID: 97599975}
   m_RootOrder: 3
 =======
@@ -2350,6 +2176,10 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+  m_Father: {fileID: 97599975}
+  m_RootOrder: 3
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &1446353268
 Prefab:
@@ -2390,6 +2220,7 @@ Prefab:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 5
 =======
       value: 16
@@ -2397,6 +2228,9 @@ Prefab:
 =======
       value: 15
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+      value: 5
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
       propertyPath: m_LocalScale.x
@@ -2460,6 +2294,7 @@ Prefab:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 13
 =======
       value: 24
@@ -2467,6 +2302,9 @@ Prefab:
 =======
       value: 23
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+      value: 13
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
       propertyPath: m_LocalScale.x
@@ -2574,6 +2412,7 @@ Transform:
   m_Children: []
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Father: {fileID: 97599975}
   m_RootOrder: 2
 =======
@@ -2584,6 +2423,10 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+  m_Father: {fileID: 97599975}
+  m_RootOrder: 2
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1637430333
 Prefab:
@@ -2624,6 +2467,7 @@ Prefab:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 10
 =======
       value: 21
@@ -2631,6 +2475,9 @@ Prefab:
 =======
       value: 20
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+      value: 10
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
       propertyPath: m_LocalScale.x
@@ -2694,6 +2541,7 @@ Prefab:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 9
 =======
       value: 20
@@ -2701,6 +2549,9 @@ Prefab:
 =======
       value: 19
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+      value: 9
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
       propertyPath: m_LocalScale.x
@@ -2764,6 +2615,7 @@ Prefab:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 6
 =======
       value: 17
@@ -2771,6 +2623,9 @@ Prefab:
 =======
       value: 16
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+      value: 6
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
       propertyPath: m_LocalScale.x
@@ -2892,6 +2747,7 @@ Prefab:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 11
 =======
       value: 22
@@ -2899,6 +2755,9 @@ Prefab:
 =======
       value: 21
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+      value: 11
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
       propertyPath: m_LocalScale.x
@@ -3035,6 +2894,7 @@ Prefab:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 12
 =======
       value: 23
@@ -3042,6 +2902,9 @@ Prefab:
 =======
       value: 22
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+      value: 12
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
       propertyPath: m_LocalScale.x
@@ -3105,6 +2968,7 @@ Prefab:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 17
 =======
       value: 28
@@ -3112,6 +2976,9 @@ Prefab:
 =======
       value: 27
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+      value: 17
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 75bea348cc2f82346b7651112c634897, type: 3}
       propertyPath: m_LocalScale.x
@@ -3310,6 +3177,7 @@ Prefab:
       propertyPath: m_RootOrder
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 1
 =======
       value: 33
@@ -3317,6 +3185,9 @@ Prefab:
 =======
       value: 32
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+      value: 1
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: efae321f8b2be2145b32632ad63716a1, type: 3}
       propertyPath: m_LocalScale.x
@@ -3497,6 +3368,7 @@ Transform:
   m_Children: []
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Father: {fileID: 97599975}
   m_RootOrder: 7
 =======
@@ -3507,6 +3379,10 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+  m_Father: {fileID: 97599975}
+  m_RootOrder: 7
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2122413795
 GameObject:
@@ -3591,6 +3467,7 @@ Transform:
   m_Children: []
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Father: {fileID: 97599975}
   m_RootOrder: 0
 =======
@@ -3601,4 +3478,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
 >>>>>>> parent of 75d0d81... Camera + Terminal Update
+=======
+  m_Father: {fileID: 97599975}
+  m_RootOrder: 0
+>>>>>>> parent of 73a7a98... Merge branch 'master' of https://github.com/ETomb/IGB100-Cycle2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
