@@ -26,6 +26,10 @@ public class Press : MonoBehaviour {
                 {
                     press.transform.GetComponent<killCube>().kill();
                 }
+                if (press.transform.tag == "Buttons")
+                {
+                    press.transform.GetComponent<Button>().Pressed();
+                }
             }
         }
 		
