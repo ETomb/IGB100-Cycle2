@@ -9,23 +9,45 @@ ModelImporter:
     100002: pCube1
     100004: pCube3
     100006: pCube4
+    100008: Alarm6
+    100010: AlarmHolder3
     400000: //RootNode
     400002: pCube1
     400004: pCube3
     400006: pCube4
+    400008: Alarm6
+    400010: AlarmHolder3
     2100000: pCube1Mat
     2100002: pCube3Mat
     2100004: pCube4Mat
+    2100006: Alarm6Mat
+    2100008: AlarmHolder3Mat
     2300000: pCube1
     2300002: pCube3
     2300004: pCube4
+    2300006: Alarm6
+    2300008: AlarmHolder3
     3300000: pCube1
     3300002: pCube3
     3300004: pCube4
+    3300006: Alarm6
+    3300008: AlarmHolder3
     4300000: pCube1
     4300002: pCube3
     4300004: pCube4
+    4300006: Alarm6
+    4300008: AlarmHolder3
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Alarm6Mat
+    second: {fileID: 2100000, guid: 0f01efa0e7f60264cb665282112c976d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AlarmHolder3Mat
+    second: {fileID: 2100000, guid: 3351597b9e32fd742a4a7aeb7388fa2f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
