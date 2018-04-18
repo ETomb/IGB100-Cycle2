@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Interactable : MonoBehaviour {
+public class Interactable : MonoBehaviour, IRaycastEventHandler {
 
     public float radius = 1f;   // reach radius
     public Transform interactionTransform;   // transform of the interaction point
 
     bool isActive = false;
     bool isInteracting = false;
+    bool isFocus = false;
     Transform player;
 
     private void Start() {
@@ -36,7 +38,7 @@ public class Interactable : MonoBehaviour {
 
     private void Update() {
         // Check if the object is able to be interacted with
-        if (isActive) {
+        if (isActive && isFocus) {
             // Find distance between player and object
             float distance = Vector3.Distance(player.position, interactionTransform.position);
             // Check if distance between is within the radius
@@ -57,5 +59,14 @@ public class Interactable : MonoBehaviour {
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(interactionTransform.position, radius);
+    }
+
+    /// Event message handling
+    public void OnRaycastEnter() {
+        isFocus = true;
+    }
+
+    public void OnRaycastExit() {
+        isFocus = false;
     }
 }

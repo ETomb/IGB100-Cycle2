@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour {
@@ -7,18 +8,25 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] float encumSpeed = 2.5f;
     [SerializeField] float xSensitivity = 2f;
     [SerializeField] float ySensitivity = 2f;
+    [SerializeField] float maxReach = 1f;
+    [SerializeField] Camera _camera;
 
     PlayerMotor motor;
     float speed;
+
+    GameObject previous;
 
     private void Start() {
         // Find PlayerMotor
         motor = GetComponent<PlayerMotor>();
         // Set initial speed
         speed = walkSpeed;
+        // Lock cursor
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update() {
+        /// Character movement
         // Calculate movement velocity as a 3d vector
         float _xMov = Input.GetAxisRaw("Horizontal");
         float _zMov = Input.GetAxisRaw("Vertical");
@@ -31,7 +39,6 @@ public class PlayerController : MonoBehaviour {
 
         // Apply movement
         motor.Move(_velocity);
-
 
         /// Character Rotation
         // Calculate rotation as a Quaternion
@@ -51,6 +58,27 @@ public class PlayerController : MonoBehaviour {
         // Apply camera rotation
         motor.RotateCamera(_cameraRotation);
 
-    }
+        /// Raycast control
+        RaycastHit hit;
 
+        // Send raycast and see if it hits an object within reach
+        if (Physics.Raycast(_camera.transform.position, transform.forward, out hit, maxReach)) {
+            GameObject current = hit.collider.gameObject;
+
+            // Only execute events if a different object is being looked at
+            if (previous != current) {
+                // Execute event on previous object
+                ExecuteEvents.Execute<IRaycastEventHandler>(previous, null, (x, y) => x.OnRaycastExit());
+                // Execute event on current object
+                ExecuteEvents.Execute<IRaycastEventHandler>(current, null, (x, y) => x.OnRaycastEnter());
+                // Set previous object to the current object
+                previous = current;
+            } 
+        } else {
+            // Execute event on previous object
+            ExecuteEvents.Execute<IRaycastEventHandler>(previous, null, (x, y) => x.OnRaycastExit());
+            // Since no object is within range, set the previous object to null
+            previous = null;
+        }
+    }
 }

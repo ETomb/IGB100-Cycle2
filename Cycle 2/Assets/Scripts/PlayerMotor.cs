@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(CharacterController))]
 public class PlayerMotor : MonoBehaviour {
 
     [SerializeField] Camera _camera;
@@ -10,9 +11,11 @@ public class PlayerMotor : MonoBehaviour {
     Quaternion cameraRotation = Quaternion.Euler(0f, 0f, 0f);
 
     Rigidbody rb;
+    CharacterController controller;
 
     private void Start() {
         rb = GetComponent<Rigidbody>();
+        controller = GetComponent<CharacterController>();
     }
 
     private void FixedUpdate() {
@@ -38,7 +41,7 @@ public class PlayerMotor : MonoBehaviour {
     // Perform movement based on velocity vector
     private void PerformMovement() {
         if(velocity != Vector3.zero){
-            rb.MovePosition(transform.position + velocity * Time.fixedDeltaTime);
+            controller.Move(transform.position + velocity * Time.fixedDeltaTime);
         }
     }
 
