@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-namespace UnityStandardAssets.Characters.FirstPerson
+namespace Characters
 {
     [Serializable]
     public class MouseLook
@@ -12,8 +12,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public bool clampVerticalRotation = true;
         public float MinimumX = -90F;
         public float MaximumX = 90F;
-        public bool smooth;
-        public float smoothTime = 5f;
         public bool lockCursor = true;
 
 
@@ -39,18 +37,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if(clampVerticalRotation)
                 m_CameraTargetRot = ClampRotationAroundXAxis (m_CameraTargetRot);
 
-            if(smooth)
-            {
-                character.localRotation = Quaternion.Slerp (character.localRotation, m_CharacterTargetRot,
-                    smoothTime * Time.deltaTime);
-                camera.localRotation = Quaternion.Slerp (camera.localRotation, m_CameraTargetRot,
-                    smoothTime * Time.deltaTime);
-            }
-            else
-            {
-                character.localRotation = m_CharacterTargetRot;
-                camera.localRotation = m_CameraTargetRot;
-            }
+            character.localRotation = m_CharacterTargetRot;
+            camera.localRotation = m_CameraTargetRot;
 
             UpdateCursorLock();
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+[SerializeField]
 public class Interactable : MonoBehaviour, IRaycastEventHandler {
 
     public float radius = 1f;   // reach radius
@@ -15,7 +16,7 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
 
     private void Start() {
         // Assign player transform
-        player = GetComponent<PlayerController>().transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // This method is meant to be overwritten

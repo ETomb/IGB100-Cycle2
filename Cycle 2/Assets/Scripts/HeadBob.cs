@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.Utility;
 
-namespace UnityStandardAssets.Characters.FirstPerson
+namespace Characters
 {
     public class HeadBob : MonoBehaviour
     {
