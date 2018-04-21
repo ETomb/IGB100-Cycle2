@@ -33,10 +33,10 @@ namespace Characters
         private float nextStep;
         private AudioSource source;
         GameObject previous;
+        Interactable interactable;
 
         // Use this for initialization
-        private void Start()
-        {
+        private void Start() {
             controller = GetComponent<CharacterController>();
             _camera = Camera.main;
             originalCameraPosition = _camera.transform.localPosition;
@@ -48,8 +48,7 @@ namespace Characters
 
 
         // Update is called once per frame
-        private void Update()
-        {
+        private void Update() {
             RotateView();
             if (!controller.isGrounded && previouslyGrounded)
             {
@@ -58,51 +57,26 @@ namespace Characters
 
             previouslyGrounded = controller.isGrounded;
 
-            /// Raycast control
-            RaycastHit hit;
-
-            // Send raycast and see if it hits an object within reach
-            Debug.DrawRay(_camera.transform.position, _camera.transform.forward, Color.green);
-            if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit))
-            {
-                GameObject current = hit.collider.gameObject;
-                Debug.Log("Looking at " + current.name);
-
-                // Only execute events if a different object is being looked at
-                if (previous != current)
-                {
-                    // Execute event on previous object
-                    ExecuteEvents.Execute<IRaycastEventHandler>(previous, null, (x, y) => x.OnRaycastExit());
-                    // Execute event on current object
-                    ExecuteEvents.Execute<IRaycastEventHandler>(current, null, (x, y) => x.OnRaycastEnter());
-                    // Set previous object to the current object
-                    previous = current;
-                }
-            }
-            else
-            {
-                // Execute event on previous object
-                ExecuteEvents.Execute<IRaycastEventHandler>(previous, null, (x, y) => x.OnRaycastExit());
-                // Since no object is within range, set the previous object to null
-                previous = null;
-            }
+            RaycastControl();
 
             if (Input.GetKeyDown(KeyCode.E)) {
-                Debug.Log("Interacting with " + previous.name);
+                if (interactable == null) {
+                    return;
+                }
+
+                interactable.Interact();
             }
         }
 
 
-        private void PlayLandingSound()
-        {
+        private void PlayLandingSound() {
             source.clip = landSound;
             source.Play();
             nextStep = stepCycle + .5f;
         }
 
 
-        private void FixedUpdate()
-        {
+        private void FixedUpdate() {
             float speed;
             GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
@@ -118,14 +92,12 @@ namespace Characters
             moveDir.z = desiredMove.z*speed;
 
 
-            if (controller.isGrounded)
-            {
+            if (controller.isGrounded) {
                 moveDir.y = -groundForce;
-            }
-            else
-            {
+            } else {
                 moveDir += Physics.gravity*gravityMultiplier*Time.fixedDeltaTime;
             }
+
             _collisionFlags = controller.Move(moveDir*Time.fixedDeltaTime);
 
             ProgressStepCycle(speed);
@@ -133,16 +105,13 @@ namespace Characters
             mouseLook.UpdateCursorLock();
         }
 
-        private void ProgressStepCycle(float speed)
-        {
-            if (controller.velocity.sqrMagnitude > 0 && (input.x != 0 || input.y != 0))
-            {
+        private void ProgressStepCycle(float speed) {
+            if (controller.velocity.sqrMagnitude > 0 && (input.x != 0 || input.y != 0)) {
                 stepCycle += (controller.velocity.magnitude + (speed*(isWalking ? 1f : m_RunstepLenghten)))*
                              Time.fixedDeltaTime;
             }
 
-            if (!(stepCycle > nextStep))
-            {
+            if (!(stepCycle > nextStep)) {
                 return;
             }
 
@@ -152,8 +121,7 @@ namespace Characters
         }
 
 
-        private void PlayFootStepAudio()
-        {
+        private void PlayFootStepAudio() {
             // pick & play a random footstep sound from the array,
             // excluding sound at index 0
             int n = Random.Range(1, footstepSounds.Length);
@@ -164,8 +132,7 @@ namespace Characters
             footstepSounds[0] = source.clip;
         }
 
-        private void GetInput(out float speed)
-        {
+        private void GetInput(out float speed) {
             // Read input
             float horizontal = CrossPlatformInputManager.GetAxisRaw("Horizontal");
             float vertical = CrossPlatformInputManager.GetAxisRaw("Vertical");
@@ -180,30 +147,25 @@ namespace Characters
             input = new Vector2(horizontal, vertical);
 
             // normalize input if it exceeds 1 in combined length:
-            if (input.sqrMagnitude > 1)
-            {
+            if (input.sqrMagnitude > 1) {
                 input.Normalize();
             }
         }
 
 
-        private void RotateView()
-        {
+        private void RotateView() {
             mouseLook.LookRotation (transform, _camera.transform);
         }
 
 
-        private void OnControllerColliderHit(ControllerColliderHit hit)
-        {
+        private void OnControllerColliderHit(ControllerColliderHit hit) {
             Rigidbody body = hit.collider.attachedRigidbody;
             //dont move the rigidbody if the character is on top of it
-            if (_collisionFlags == CollisionFlags.Below)
-            {
+            if (_collisionFlags == CollisionFlags.Below) {
                 return;
             }
 
-            if (body == null || body.isKinematic)
-            {
+            if (body == null || body.isKinematic) {
                 return;
             }
             body.AddForceAtPosition(controller.velocity*0.1f, hit.point, ForceMode.Impulse);
@@ -214,9 +176,11 @@ namespace Characters
             RaycastHit hit;
 
             // Send raycast and see if it hits an object within reach
-            Debug.DrawRay(_camera.transform.position, transform.forward, Color.gray);
-            if (Physics.Raycast(_camera.transform.position, transform.forward, out hit, maxReach)) {
+            Debug.DrawRay(_camera.transform.position, _camera.transform.forward, Color.green);
+            if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit)) {
+
                 GameObject current = hit.collider.gameObject;
+
 
                 // Only execute events if a different object is being looked at
                 if (previous != current) {
@@ -226,6 +190,13 @@ namespace Characters
                     ExecuteEvents.Execute<IRaycastEventHandler>(current, null, (x, y) => x.OnRaycastEnter());
                     // Set previous object to the current object
                     previous = current;
+                    // Set interactable variable to the interactable component of the object
+                    interactable = hit.collider.GetComponent<Interactable>();
+
+                    // Debug code - displays the name on the object
+                    Debug.Log("Looking at " + current.name);
+
+
                 }
             } else {
                 // Execute event on previous object

@@ -21,7 +21,7 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
 
     // This method is meant to be overwritten
     public virtual void Interact() {
-        Debug.Log("Interacting with" + interactionTransform.name);
+        Debug.Log("Interacting with " + transform.name);
 
         // Set interaction state to be false
         isInteracting = false;
