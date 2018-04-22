@@ -1763,8 +1763,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd8e967ab1891346809ad4d9f74278f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flightBackground: {fileID: 1364180278}
-  colourChangeSpeed: 1
+  flightBackgroundRenderer: {fileID: 1364180280}
+  colourChangeSpeed: 0.25
+  initialColourShiftDelay: 10
   materialColourStages:
   - {r: 0.08235294, g: 0.627451, b: 0.84313726, a: 1}
   - {r: 0.050980393, g: 0.49411765, b: 0.6666667, a: 1}
@@ -1772,7 +1773,16 @@ MonoBehaviour:
   - {r: 0, g: 0, b: 0, a: 1}
   interactableControllers:
   - {fileID: 528628775}
-  stageEndTimings: []
+  currentStageIndex: 0
+  stageEndTimings:
+  - 20
+  - 30
+  - 40
+  stageActivationRates: []
+  stageFailiureTimes:
+  - 0
+  - 0
+  - 0
 --- !u!1 &242231742 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100010, guid: efae321f8b2be2145b32632ad63716a1, type: 3}

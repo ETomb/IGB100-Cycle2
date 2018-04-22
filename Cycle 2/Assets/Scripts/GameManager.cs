@@ -5,17 +5,23 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     public static GameManager instance = null;
-    [SerializeField] GameObject flightBackground;
+
+    [SerializeField] Renderer flightBackgroundRenderer;
     [SerializeField] float colourChangeSpeed = 1f;
+    [SerializeField] float initialColourShiftDelay = 0;
     [SerializeField] Color[] materialColourStages;
     [SerializeField] Interactable[] interactableControllers;
+    [SerializeField] int currentStageIndex = 0;
     [SerializeField] float[] stageEndTimings;
+    [SerializeField] float[] stageActivationRates; // Activates controllers every X seconds
+    [SerializeField] float[] stageFailiureTimes; // Amount of seconds before the player is considered to have failed to interact with the active controller
 
 
     float failTime;
+    float timer = 0;
+    bool controllersAreActive;
     List<Interactable> activeControllers;
     Color lerpedColour;
-    Material flightBackgroundMaterial;
 
     private void Awake() {
         //Check if instance already exists
@@ -35,20 +41,37 @@ public class GameManager : MonoBehaviour {
     }
 
     private void Start() {
-        // Set Flight Background Material variable if a Flight Background has been assigned
-        if (flightBackground != null) {
-            flightBackgroundMaterial = flightBackground.GetComponent<MeshRenderer>().material;
-        }
+        lerpedColour = materialColourStages[0];
     }
 
-    private void ColourShift(Color currentColour, Color targetColour) {
-        // Check if the colors are equal
-        if(currentColour == targetColour) {
-            return;
+    private void Update() {
+        // Stage switching
+        if (timer >= stageEndTimings[currentStageIndex]) {
+            if (currentStageIndex < stageEndTimings.Length - 1) {
+                currentStageIndex++;
+            } else {
+                /// End Game State
+            }
         }
 
-        // Shift colour by one stage
-        Color.Lerp(currentColour, targetColour, Time.deltaTime);
+        if (timer >= initialColourShiftDelay) {
+            // Update colour of the flight background
+            lerpedColour = ColourShift(lerpedColour, materialColourStages[currentStageIndex + 1]);
+            flightBackgroundRenderer.material.color = lerpedColour;
+        }
+
+        // Increment timer
+        timer += Time.deltaTime;
+    }
+
+    private Color ColourShift(Color currentColour, Color targetColour) {
+        // Check if the colors are equal
+        if(currentColour == targetColour) {
+            return currentColour;
+        }
+
+        // Shift colour
+        return Color.Lerp(currentColour, targetColour, Time.deltaTime * colourChangeSpeed);
     }
 
     // Activate specified controller
@@ -57,6 +80,8 @@ public class GameManager : MonoBehaviour {
         controller.Activate();
         // Add to active list
         activeControllers.Add(controller);
+        // Update active status if need be
+        CheckActiveStatus();
     }
 
     // Deactivate specified controller
@@ -65,6 +90,17 @@ public class GameManager : MonoBehaviour {
         controller.Deactivate();
         // Remove from active list
         activeControllers.Remove(controller);
+        // Update active status if need be
+        CheckActiveStatus();
+    }
+
+    // Check if any controllers are active
+    private void CheckActiveStatus() {
+        if (activeControllers.Count != 0) {
+            controllersAreActive = true;
+        } else {
+            controllersAreActive = false;
+        }
     }
 }
 
