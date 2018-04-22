@@ -1777,9 +1777,15 @@ MonoBehaviour:
   - 20
   - 30
   - 40
-  stageActivationRates: []
-  stageActivationNumbers: 
-  stageFailiureTimings: []
+  stageActivationRates:
+  - 0
+  - 0
+  - 0
+  stageActivationNumbers: 000000000000000000000000
+  stageFailiureTimings:
+  - 0
+  - 0
+  - 0
   maxFailiures: 3
 --- !u!1 &242231742 stripped
 GameObject:
