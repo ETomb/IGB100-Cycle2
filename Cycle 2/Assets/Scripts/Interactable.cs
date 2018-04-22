@@ -21,6 +21,11 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
 
     // This method is meant to be overwritten
     public virtual void Interact() {
+        // If the object isn't active, do nothing
+        if (!isActive) {
+            return;
+        }
+
         Debug.Log("Interacting with " + transform.name);
 
         // Set interaction state to be false
@@ -37,6 +42,16 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
         isInteracting = true;
     }
 
+    // Set the interactable to be active
+    public void Activate() {
+        isActive = true;
+    }
+
+    // Set the interactable to not be active
+    public void Deactivate() {
+        isActive = false;
+    }
+
     private void Update() {
         // Check if the object is able to be interacted with
         if (isActive && isFocus) {
@@ -46,12 +61,6 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
             if (distance <= radius) {
                 // Show tooltip
                 Tooltip();
-                // Check if player is interacting with object
-                if (isInteracting) {
-                    Interact();
-                    // Set object ot be inactive
-                    isActive = false;
-                }
             }
         }
     }
