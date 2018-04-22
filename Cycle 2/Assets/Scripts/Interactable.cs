@@ -27,19 +27,11 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
         }
 
         Debug.Log("Interacting with " + transform.name);
-
-        // Set interaction state to be false
-        isInteracting = false;
     }
 
     // This method is meant to be overwritten
     public virtual void Tooltip() {
         Debug.Log("Tooltip active for" + interactionTransform.name);
-    }
-
-    // Set whether the object is being interacted with
-    public void OnInteracted() {
-        isInteracting = true;
     }
 
     // Set the interactable to be active
