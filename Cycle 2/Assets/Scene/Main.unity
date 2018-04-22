@@ -4065,7 +4065,6 @@ GameObject:
   - component: {fileID: 1002918941}
   - component: {fileID: 1002918940}
   - component: {fileID: 1002918939}
-  - component: {fileID: 1002918938}
   m_Layer: 0
   m_Name: ShipCamera
   m_TagString: Untagged
@@ -4073,13 +4072,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1002918938
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1002918937}
-  m_Enabled: 1
 --- !u!124 &1002918939
 Behaviour:
   m_ObjectHideFlags: 0
