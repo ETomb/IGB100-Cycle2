@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class TestInteract : Interactable {
 
-    public override void Interact() {
-        base.Interact();
-        Destroy(this);
+    private void Update() {
+        Activate();
+    }
+
+    public override void Interact(float distance) {
+        base.Interact(distance);
     }
 
     public override void Tooltip() {

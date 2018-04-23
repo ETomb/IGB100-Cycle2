@@ -64,7 +64,10 @@ namespace Characters
                     return;
                 }
 
-                interactable.Interact();
+                Vector3 closestPoint = gameObject.GetComponent<CharacterController>().ClosestPoint(interactable.interactionTransform.position);
+                float distance = Vector3.Distance(closestPoint, interactable.interactionTransform.position);
+
+                interactable.Interact(distance);
             }
         }
 
@@ -180,7 +183,6 @@ namespace Characters
             if (Physics.Raycast(_camera.transform.position, _camera.transform.forward, out hit)) {
 
                 GameObject current = hit.collider.gameObject;
-
 
                 // Only execute events if a different object is being looked at
                 if (previous != current) {

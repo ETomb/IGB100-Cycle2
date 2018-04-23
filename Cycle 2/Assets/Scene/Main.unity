@@ -1770,7 +1770,8 @@ MonoBehaviour:
   - {r: 0.050980393, g: 0.49411765, b: 0.6666667, a: 1}
   - {r: 0.047058824, g: 0.37254903, b: 0.5019608, a: 1}
   - {r: 0, g: 0, b: 0, a: 1}
-  interactableControllers: []
+  interactableControllers:
+  - {fileID: 1995225961}
   initialTimingDelay: 10
   currentStageIndex: 0
   stageEndTimings:
@@ -1778,12 +1779,12 @@ MonoBehaviour:
   - 30
   - 40
   stageActivationRates:
-  - 0
+  - 1
   - 0
   - 0
   stageActivationNumbers: 000000000000000000000000
   stageFailiureTimings:
-  - 0
+  - 30
   - 0
   - 0
   maxFailiures: 3
@@ -8976,7 +8977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e07e34e1869923449c62bf620ecd899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.005
+  radius: 1.5
   interactionTransform: {fileID: 128028741}
 --- !u!1 &2006602728
 GameObject:

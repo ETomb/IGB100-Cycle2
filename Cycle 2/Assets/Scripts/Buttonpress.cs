@@ -5,9 +5,9 @@ using UnityEngine;
 public class Buttonpress : Interactable {
 
     public int red = 1;
-    public override void Interact()
+    public override void Interact(float distance)
     {
-        base.Interact();
+        base.Interact(distance);
         red = 2;
         Deactivate();
     }

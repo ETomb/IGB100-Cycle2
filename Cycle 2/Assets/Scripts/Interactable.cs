@@ -10,19 +10,18 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
     public Transform interactionTransform;   // transform of the interaction point
 
     bool isActive = false;
-    bool isInteracting = false;
     bool isFocus = false;
-    Transform player;
+    GameObject player;
 
     private void Start() {
         // Assign player transform
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").gameObject;
     }
 
     // This method is meant to be overwritten
-    public virtual void Interact() {
-        // If the object isn't active, do nothing
-        if (!isActive) {
+    public virtual void Interact(float distance) {
+        // If the object isn't active or out of range, do nothing
+        if (!isActive || distance > radius) {
             return;
         }
 
@@ -47,13 +46,6 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
     private void Update() {
         // Check if the object is able to be interacted with
         if (isActive && isFocus) {
-            // Find distance between player and object
-            float distance = Vector3.Distance(player.position, interactionTransform.position);
-            // Check if distance between is within the radius
-            if (distance <= radius) {
-                // Show tooltip
-                Tooltip();
-            }
         }
     }
 
