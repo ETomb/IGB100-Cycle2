@@ -97,8 +97,8 @@ public class GameManager : MonoBehaviour {
         CheckActiveStatus();
     }
 
-    // Deactivate specified controller
-    private void DeactivateController(Interactable controller) {
+    // Deactivate specified controller (public as it's called by outside scripts
+    public void DeactivateController(Interactable controller) {
         // Set to not active
         controller.Deactivate();
         // Remove from active list
