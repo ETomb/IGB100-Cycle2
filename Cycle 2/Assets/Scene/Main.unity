@@ -1865,14 +1865,13 @@ MonoBehaviour:
   - 30
   - 40
   stageActivationRates:
-  - 1
-  - 0
-  - 0
-  stageActivationNumbers: 000000000000000000000000
+  - 10
+  - 10
+  - 10
   stageFailiureTimings:
-  - 30
-  - 0
-  - 0
+  - 5
+  - 5
+  - 5
   maxFailiures: 3
 --- !u!1 &242231742 stripped
 GameObject:
@@ -9627,7 +9626,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1995225958}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e07e34e1869923449c62bf620ecd899, type: 3}
+  m_Script: {fileID: 11500000, guid: fec4560229029074b856f946a33daedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 1.5

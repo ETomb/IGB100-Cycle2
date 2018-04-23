@@ -14,15 +14,15 @@ public class GameManager : MonoBehaviour {
     [SerializeField] int currentStageIndex = 0;
     [SerializeField] float[] stageEndTimings;
     [SerializeField] float[] stageActivationRates; // Activates controllers every X seconds
-    [SerializeField] int[] stageActivationNumbers; // Number of controllers to activate
     [SerializeField] float[] stageFailiureTimings; // Amount of seconds before the player is considered to have failed to interact with the active controller
     [SerializeField] int maxFailiures = 3;
 
     int currentFailiures = 0;
     float failTime;
     float timer = 0;
+    float nextActiavtionTime = 0;
     bool controllersAreActive;
-    List<Interactable> activeControllers;
+    List<Interactable> activeControllers = new List<Interactable> { };
     Color lerpedColour;
 
     private void Awake() {
@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour {
 
     private void Start() {
         lerpedColour = materialColourStages[0];
+        nextActiavtionTime = initialTimingDelay;
     }
 
     private void Update() {
@@ -62,14 +63,16 @@ public class GameManager : MonoBehaviour {
             flightBackgroundRenderer.material.color = lerpedColour;
 
             // Activate controllers at set rate
-            if ((int)Mathf.Repeat(timer, stageActivationRates[currentStageIndex]) == 0) {
-                // Randomly activate controllers
-                RandomlyActivateControllers(stageActivationNumbers[currentStageIndex]);
-                // Set fail time
+            if (!controllersAreActive && Time.time >= nextActiavtionTime) {
+                RandomlyActivateControllers();
                 failTime = timer + stageFailiureTimings[currentStageIndex];
+
+                nextActiavtionTime += stageActivationRates[currentStageIndex];
             }
+           
+
             // Check for failiure at set rate
-            if (timer == failTime && controllersAreActive)
+            if (Time.time >= failTime && controllersAreActive)
                 Fail();         
         }
 
@@ -109,6 +112,7 @@ public class GameManager : MonoBehaviour {
 
     // Check if any controllers are active
     private void CheckActiveStatus() {
+        Debug.Log("Checking Active State");
         if (activeControllers.Count != 0) {
             controllersAreActive = true;
         } else {
@@ -118,13 +122,15 @@ public class GameManager : MonoBehaviour {
 
     // Fail condition
     private void Fail() {
+        // Increase number of failiures
+        currentFailiures = currentFailiures + 1;
+
         // Deactivate controllers
         foreach (Interactable controller in activeControllers) {
             DeactivateController(controller);
         }
 
-        // Increase number of failiures
-        currentFailiures++;
+
 
         // Check for fail state
         if (currentFailiures >= maxFailiures) {
@@ -133,25 +139,10 @@ public class GameManager : MonoBehaviour {
     }
 
     // Randomly select a specifies amount of controllers
-    private void RandomlyActivateControllers(int amount) {
-        float i = 0;
-        List<int> selectedIndices = null;
-        int index;
-
-        // Loop until enough controllers are chosen
-        while (i < amount) {
-            // Randomly choose an index
-            index = Random.Range(0, interactableControllers.Length - 1);
-            // Check if this index has been used in the loop previously
-            if (!selectedIndices.Contains(index)) {
-                // Add index to the list of used indices
-                selectedIndices.Add(index);
-                // Activate controller at selected index
-                ActivateController(interactableControllers[index]);
-                // Increment coutner by 1
-                i++;
-            }           
-        }
+    private void RandomlyActivateControllers() {
+        int index = Random.Range(0, interactableControllers.Length - 1);
+        // Activate controller at selected index
+        ActivateController(interactableControllers[index]);
     }
 }
 
