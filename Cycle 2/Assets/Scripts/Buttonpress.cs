@@ -4,19 +4,12 @@ using UnityEngine;
 
 public class Buttonpress : Interactable {
 
-    private void Start()
-    {
-        Activate();
-    }
-
+    public int red = 1;
     public override void Interact(float distance)
     {
         base.Interact(distance);
-        if(distance <= radius)
-        {
-            //Deactivate();
-            GameManager.instance.DeactivateController(this);
-        }
+        red = 2;
+        Deactivate();
     }
 
     public override void Tooltip()

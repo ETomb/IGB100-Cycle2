@@ -9,7 +9,7 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
     public float radius = 1f;   // reach radius
     public Transform interactionTransform;   // transform of the interaction point
 
-    public bool isActive = false;
+    bool isActive = false;
     bool isFocus = false;
     GameObject player;
 
