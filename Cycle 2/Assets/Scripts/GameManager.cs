@@ -130,8 +130,6 @@ public class GameManager : MonoBehaviour {
             DeactivateController(controller);
         }
 
-
-
         // Check for fail state
         if (currentFailiures >= maxFailiures) {
             /// Fail state
