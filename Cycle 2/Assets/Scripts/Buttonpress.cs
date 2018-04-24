@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ButtonPress : Interactable {
-
     public override void Interact(float distance)
     {
         base.Interact(distance);
-        GameManager.instance.DeactivateController(this);
+        if (distance <= radius)
+        {
+            GameManager.instance.DeactivateController(this);
+            ball.GetComponent<Indicator>().DestroySelf();
+        }
     }
 
     public override void Tooltip()

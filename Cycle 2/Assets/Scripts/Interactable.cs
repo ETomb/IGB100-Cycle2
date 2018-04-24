@@ -13,6 +13,9 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
     bool isFocus = false;
     GameObject player;
 
+    //Indicator for play test
+    public GameObject ball;
+
     private void Start() {
         // Assign player transform
         player = GameObject.FindGameObjectWithTag("Player").gameObject;
@@ -36,6 +39,7 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
     // Set the interactable to be active
     public void Activate() {
         isActive = true;
+        ball.SetActive(true);
     }
 
     // Set the interactable to not be active
