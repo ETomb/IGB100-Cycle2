@@ -2213,8 +2213,7 @@ MonoBehaviour:
   - {r: 0.050980393, g: 0.49411765, b: 0.6666667, a: 1}
   - {r: 0.047058824, g: 0.37254903, b: 0.5019608, a: 1}
   - {r: 0, g: 0, b: 0, a: 1}
-  interactableControllers:
-  - {fileID: 1995225961}
+  interactableControllers: []
   initialTimingDelay: 10
   currentStageIndex: 0
   stageEndTimings:
@@ -2226,9 +2225,9 @@ MonoBehaviour:
   - 5
   - 5
   stageFailureTimings:
-  - 3
-  - 3
-  - 3
+  - 300
+  - 300
+  - 300
   gameLength: 296
   failIndicators:
   - {fileID: 965775203}

@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour {
     private void Start() {
         lerpedColour = materialColourStages[0];
         nextActiavtionTime = initialTimingDelay;
+        stageEndTimings[stageEndTimings.Length - 1] = gameLength;
     }
 
     private void Update() {
@@ -180,6 +181,11 @@ public class GameManager : MonoBehaviour {
 
     // Randomly select a specifies amount of controllers
     private void RandomlyActivateControllers() {
+        // Exit the function if the array is of size 0
+        if (interactableControllers.Length == 0) {
+            return;
+        }
+        // Get a random index
         int index = Random.Range(0, interactableControllers.Length - 1);
         // Activate controller at selected index
         ActivateController(interactableControllers[index]);
