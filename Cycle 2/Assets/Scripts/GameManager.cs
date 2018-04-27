@@ -17,14 +17,20 @@ public class GameManager : MonoBehaviour {
     [SerializeField] float[] stageEndTimings;
     [SerializeField] float[] stageActivationRates; // Activates controllers every X seconds
     [SerializeField] float[] stageFailureTimings; // Amount of seconds before the player is considered to have failed to interact with the active controller
-    [SerializeField] GameObject[] failIndicators = new GameObject[3];
     [SerializeField] float gameLength;
+    [SerializeField] GameObject[] failIndicators = new GameObject[3];
+    [SerializeField] Slider progressSlider;
+    [SerializeField] Image failImage;
+    [SerializeField] Color flashColour = new Color(1f, 0f, 0f, 0.1f);
+    [SerializeField] float flashSpeed = 5f;
+    [SerializeField] AudioSource warningSource;
+
 
 
     int maxFailures = 4;
     int currentFailures = 0;
     float failTime;
-    float timer = 0;
+    bool justFailed = false;
     float nextActiavtionTime = 0;
     bool controllersAreActive;
     List<Interactable> activeControllers = new List<Interactable> { };
@@ -54,7 +60,7 @@ public class GameManager : MonoBehaviour {
 
     private void Update() {
         // Stage switching
-        if (timer >= stageEndTimings[currentStageIndex]) {
+        if (Time.time >= stageEndTimings[currentStageIndex]) {
             if (currentStageIndex < stageEndTimings.Length - 1) {
                 currentStageIndex++;
             } else {
@@ -64,7 +70,7 @@ public class GameManager : MonoBehaviour {
             }
         }
 
-        if (timer >= initialTimingDelay) {
+        if (Time.time >= initialTimingDelay) {
             // Update colour of the flight background
             lerpedColour = ColourShift(lerpedColour, materialColourStages[currentStageIndex + 1]);
             flightBackgroundRenderer.material.color = lerpedColour;
@@ -72,7 +78,8 @@ public class GameManager : MonoBehaviour {
             // Activate controllers at set rate
             if (!controllersAreActive && Time.time >= nextActiavtionTime) {
                 RandomlyActivateControllers();
-                failTime = timer + stageFailureTimings[currentStageIndex];
+                // Set failure time
+                failTime = Time.time + stageFailureTimings[currentStageIndex];
 
                 nextActiavtionTime += stageActivationRates[currentStageIndex];
             }
@@ -83,8 +90,21 @@ public class GameManager : MonoBehaviour {
                 Fail();         
         }
 
-        // Increment timer
-        timer += Time.deltaTime;
+        // Check if the player failed
+        if (justFailed) {
+            // Set colour of the flash image
+            failImage.color = flashColour;
+            // Record that the player has stopped failing
+            justFailed = false;
+        } else {
+            // Revert colour gradually back to clear
+            failImage.color = Color.Lerp(failImage.color, Color.clear, flashSpeed * Time.deltaTime);
+        }
+
+        // Update progress bar
+        if (progressSlider != null) {
+            progressSlider.value = Time.time / gameLength;
+        }
     }
 
     private Color ColourShift(Color currentColour, Color targetColour) {
@@ -132,8 +152,18 @@ public class GameManager : MonoBehaviour {
         // Increase number of failures
         currentFailures = currentFailures + 1;
 
-        // Activate indicator
-        failIndicators[currentFailures - 1].SetActive(true);
+        // Set boolean
+        justFailed = true;
+
+        // Play warning sound
+        if (warningSource != null) {
+            warningSource.Play();
+        }
+
+        // Activate indicators
+        if (currentFailures < maxFailures) {
+            failIndicators[currentFailures - 1].SetActive(true);
+        }
 
         // Check for fail state
         if (currentFailures >= maxFailures) {
