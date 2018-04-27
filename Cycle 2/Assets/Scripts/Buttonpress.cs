@@ -9,7 +9,7 @@ public class ButtonPress : Interactable {
         if (distance <= radius)
         {
             GameManager.instance.DeactivateController(this);
-            ball.SetActive(false);
+            /// Set indicator to be inactive
         }
     }
 

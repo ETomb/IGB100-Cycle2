@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -14,10 +16,13 @@ public class GameManager : MonoBehaviour {
     [SerializeField] int currentStageIndex = 0;
     [SerializeField] float[] stageEndTimings;
     [SerializeField] float[] stageActivationRates; // Activates controllers every X seconds
-    [SerializeField] float[] stageFailiureTimings; // Amount of seconds before the player is considered to have failed to interact with the active controller
-    [SerializeField] int maxFailiures = 3;
+    [SerializeField] float[] stageFailureTimings; // Amount of seconds before the player is considered to have failed to interact with the active controller
+    [SerializeField] GameObject[] failIndicators = new GameObject[3];
+    [SerializeField] float gameLength;
 
-    int currentFailiures = 0;
+
+    int maxFailures = 4;
+    int currentFailures = 0;
     float failTime;
     float timer = 0;
     float nextActiavtionTime = 0;
@@ -53,7 +58,9 @@ public class GameManager : MonoBehaviour {
             if (currentStageIndex < stageEndTimings.Length - 1) {
                 currentStageIndex++;
             } else {
-                /// End Game State
+                // Load victory scene and destroy this singleton
+                SceneManager.LoadScene("Victory");
+                Destroy(gameObject);
             }
         }
 
@@ -65,13 +72,13 @@ public class GameManager : MonoBehaviour {
             // Activate controllers at set rate
             if (!controllersAreActive && Time.time >= nextActiavtionTime) {
                 RandomlyActivateControllers();
-                failTime = timer + stageFailiureTimings[currentStageIndex];
+                failTime = timer + stageFailureTimings[currentStageIndex];
 
                 nextActiavtionTime += stageActivationRates[currentStageIndex];
             }
            
 
-            // Check for failiure at set rate
+            // Check for failure at set rate
             if (Time.time >= failTime && controllersAreActive)
                 Fail();         
         }
@@ -122,17 +129,22 @@ public class GameManager : MonoBehaviour {
 
     // Fail condition
     private void Fail() {
-        // Increase number of failiures
-        currentFailiures = currentFailiures + 1;
+        // Increase number of failures
+        currentFailures = currentFailures + 1;
+
+        // Activate indicator
+        failIndicators[currentFailures - 1].SetActive(true);
+
+        // Check for fail state
+        if (currentFailures >= maxFailures) {
+            // Load defeat scene and destroy this singleton
+            SceneManager.LoadScene("Defeat");
+            Destroy(gameObject);
+        }
 
         // Deactivate controllers
         foreach (Interactable controller in activeControllers) {
             DeactivateController(controller);
-        }
-
-        // Check for fail state
-        if (currentFailiures >= maxFailiures) {
-            /// Fail state
         }
     }
 
