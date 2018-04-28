@@ -66,9 +66,4 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
     public void OnRaycastExit() {
         isFocus = false;
     }
-
-    public void PlayFail()
-    {
-        Instantiate(failed);
-    }
 }
