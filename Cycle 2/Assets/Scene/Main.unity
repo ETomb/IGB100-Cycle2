@@ -342,9 +342,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4560229029074b856f946a33daedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
-  interactionTransform: {fileID: 0}
+  radius: 1.2
+  interactionTransform: {fileID: 1350581070}
   isActive: 0
+  alarm: {fileID: 1690345616646034, guid: a450208db99056443b1c5ccdce80f5c9, type: 2}
+  activated: {fileID: 1708110860137430, guid: 850c9011331bbc44599a749a9c88badc, type: 2}
+  failed: {fileID: 1255564113065452, guid: bf3deff39e3f42d4fb9f1a58bc9488ba, type: 2}
 --- !u!1 &43443225
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +516,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 54580627}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &56811699 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400006, guid: 8016e6f8c5a6599478391e941f5c0821, type: 3}
+  m_PrefabInternal: {fileID: 437849466}
 --- !u!1 &58526668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,9 +2012,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4560229029074b856f946a33daedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
-  interactionTransform: {fileID: 0}
+  radius: 1.2
+  interactionTransform: {fileID: 1033316722}
   isActive: 0
+  alarm: {fileID: 1690345616646034, guid: a450208db99056443b1c5ccdce80f5c9, type: 2}
+  activated: {fileID: 1708110860137430, guid: 850c9011331bbc44599a749a9c88badc, type: 2}
+  failed: {fileID: 1255564113065452, guid: bf3deff39e3f42d4fb9f1a58bc9488ba, type: 2}
 --- !u!1 &237993045
 GameObject:
   m_ObjectHideFlags: 0
@@ -2256,6 +2266,10 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300006, guid: efae321f8b2be2145b32632ad63716a1, type: 3}
+--- !u!4 &246297115 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400006, guid: 8016e6f8c5a6599478391e941f5c0821, type: 3}
+  m_PrefabInternal: {fileID: 1929713062}
 --- !u!1 &255107334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2486,9 +2500,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4560229029074b856f946a33daedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
-  interactionTransform: {fileID: 0}
+  radius: 1.5
+  interactionTransform: {fileID: 1309755004}
   isActive: 0
+  alarm: {fileID: 1690345616646034, guid: a450208db99056443b1c5ccdce80f5c9, type: 2}
+  activated: {fileID: 1708110860137430, guid: 850c9011331bbc44599a749a9c88badc, type: 2}
+  failed: {fileID: 1255564113065452, guid: bf3deff39e3f42d4fb9f1a58bc9488ba, type: 2}
 --- !u!1 &274436847
 GameObject:
   m_ObjectHideFlags: 0
@@ -2657,6 +2674,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 276373303}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &292504652 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400006, guid: 8016e6f8c5a6599478391e941f5c0821, type: 3}
+  m_PrefabInternal: {fileID: 403466774}
 --- !u!1 &352907929
 GameObject:
   m_ObjectHideFlags: 0
@@ -3218,9 +3239,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4560229029074b856f946a33daedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
-  interactionTransform: {fileID: 0}
+  radius: 1.2
+  interactionTransform: {fileID: 1867620573}
   isActive: 0
+  alarm: {fileID: 1690345616646034, guid: a450208db99056443b1c5ccdce80f5c9, type: 2}
+  activated: {fileID: 1708110860137430, guid: 850c9011331bbc44599a749a9c88badc, type: 2}
+  failed: {fileID: 1255564113065452, guid: bf3deff39e3f42d4fb9f1a58bc9488ba, type: 2}
 --- !u!1 &478760585
 GameObject:
   m_ObjectHideFlags: 0
@@ -3712,9 +3736,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4560229029074b856f946a33daedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
-  interactionTransform: {fileID: 0}
+  radius: 1.5
+  interactionTransform: {fileID: 772930056}
   isActive: 0
+  alarm: {fileID: 1690345616646034, guid: a450208db99056443b1c5ccdce80f5c9, type: 2}
+  activated: {fileID: 1708110860137430, guid: 850c9011331bbc44599a749a9c88badc, type: 2}
+  failed: {fileID: 1255564113065452, guid: bf3deff39e3f42d4fb9f1a58bc9488ba, type: 2}
 --- !u!1 &589177328
 GameObject:
   m_ObjectHideFlags: 0
@@ -4136,9 +4163,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4560229029074b856f946a33daedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
-  interactionTransform: {fileID: 0}
+  radius: 1.2
+  interactionTransform: {fileID: 1582528508}
   isActive: 0
+  alarm: {fileID: 1690345616646034, guid: a450208db99056443b1c5ccdce80f5c9, type: 2}
+  activated: {fileID: 1708110860137430, guid: 850c9011331bbc44599a749a9c88badc, type: 2}
+  failed: {fileID: 1255564113065452, guid: bf3deff39e3f42d4fb9f1a58bc9488ba, type: 2}
 --- !u!1 &607312390
 GameObject:
   m_ObjectHideFlags: 0
@@ -5111,6 +5141,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 772116825}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &772930056 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400006, guid: 8016e6f8c5a6599478391e941f5c0821, type: 3}
+  m_PrefabInternal: {fileID: 648157906}
 --- !u!1001 &776733176
 Prefab:
   m_ObjectHideFlags: 0
@@ -6324,6 +6358,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1012249936}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1016182274 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: 302119aaca279a743a62ceb0eba9ad44, type: 3}
+  m_PrefabInternal: {fileID: 68929658}
 --- !u!1 &1016577654
 GameObject:
   m_ObjectHideFlags: 0
@@ -6538,6 +6576,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1029384297}
+--- !u!4 &1033316722 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: 302119aaca279a743a62ceb0eba9ad44, type: 3}
+  m_PrefabInternal: {fileID: 1022194340}
 --- !u!1 &1039994961
 GameObject:
   m_ObjectHideFlags: 0
@@ -6673,9 +6715,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4560229029074b856f946a33daedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
-  interactionTransform: {fileID: 0}
+  radius: 1.2
+  interactionTransform: {fileID: 1016182274}
   isActive: 0
+  alarm: {fileID: 1690345616646034, guid: a450208db99056443b1c5ccdce80f5c9, type: 2}
+  activated: {fileID: 1708110860137430, guid: 850c9011331bbc44599a749a9c88badc, type: 2}
+  failed: {fileID: 1255564113065452, guid: bf3deff39e3f42d4fb9f1a58bc9488ba, type: 2}
 --- !u!1 &1059258502
 GameObject:
   m_ObjectHideFlags: 0
@@ -7636,9 +7681,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4560229029074b856f946a33daedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
-  interactionTransform: {fileID: 0}
+  radius: 1.5
+  interactionTransform: {fileID: 292504652}
   isActive: 0
+  alarm: {fileID: 1690345616646034, guid: a450208db99056443b1c5ccdce80f5c9, type: 2}
+  activated: {fileID: 1708110860137430, guid: 850c9011331bbc44599a749a9c88badc, type: 2}
+  failed: {fileID: 1255564113065452, guid: bf3deff39e3f42d4fb9f1a58bc9488ba, type: 2}
 --- !u!1 &1225607988
 GameObject:
   m_ObjectHideFlags: 0
@@ -8429,6 +8477,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1304587609}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1309755004 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400006, guid: 8016e6f8c5a6599478391e941f5c0821, type: 3}
+  m_PrefabInternal: {fileID: 1068711295}
 --- !u!1 &1318192267
 GameObject:
   m_ObjectHideFlags: 0
@@ -8681,6 +8733,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1345324542}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1350581070 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: 302119aaca279a743a62ceb0eba9ad44, type: 3}
+  m_PrefabInternal: {fileID: 1948983746}
 --- !u!1 &1359201327
 GameObject:
   m_ObjectHideFlags: 0
@@ -8849,7 +8905,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -8873,7 +8929,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!1 &1364180278
 GameObject:
   m_ObjectHideFlags: 0
@@ -10574,6 +10630,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1579365683}
+--- !u!4 &1582528508 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: 302119aaca279a743a62ceb0eba9ad44, type: 3}
+  m_PrefabInternal: {fileID: 2049012976}
 --- !u!1 &1598540529
 GameObject:
   m_ObjectHideFlags: 0
@@ -12436,9 +12496,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4560229029074b856f946a33daedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
-  interactionTransform: {fileID: 0}
+  radius: 1.5
+  interactionTransform: {fileID: 246297115}
   isActive: 0
+  alarm: {fileID: 1690345616646034, guid: a450208db99056443b1c5ccdce80f5c9, type: 2}
+  activated: {fileID: 1708110860137430, guid: 850c9011331bbc44599a749a9c88badc, type: 2}
+  failed: {fileID: 1255564113065452, guid: bf3deff39e3f42d4fb9f1a58bc9488ba, type: 2}
 --- !u!1 &1840588416
 GameObject:
   m_ObjectHideFlags: 0
@@ -12513,6 +12576,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1840588416}
+--- !u!4 &1867620573 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: 302119aaca279a743a62ceb0eba9ad44, type: 3}
+  m_PrefabInternal: {fileID: 1683212577}
 --- !u!1 &1882872869
 GameObject:
   m_ObjectHideFlags: 0
@@ -13058,9 +13125,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4560229029074b856f946a33daedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
-  interactionTransform: {fileID: 0}
+  radius: 1.5
+  interactionTransform: {fileID: 56811699}
   isActive: 0
+  alarm: {fileID: 1690345616646034, guid: a450208db99056443b1c5ccdce80f5c9, type: 2}
+  activated: {fileID: 1708110860137430, guid: 850c9011331bbc44599a749a9c88badc, type: 2}
+  failed: {fileID: 1255564113065452, guid: bf3deff39e3f42d4fb9f1a58bc9488ba, type: 2}
 --- !u!1 &1997171649
 GameObject:
   m_ObjectHideFlags: 0

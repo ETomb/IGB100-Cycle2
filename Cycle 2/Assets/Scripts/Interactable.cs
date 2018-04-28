@@ -12,6 +12,7 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
     public bool isActive = false;
     bool isFocus = false;
     GameObject player;
+    public GameObject alarm, activated, failed;
 
     private void Start() {
         // Assign player transform
