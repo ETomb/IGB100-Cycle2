@@ -12,7 +12,7 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
     public bool isActive = false;
     bool isFocus = false;
     GameObject player;
-    public GameObject alarm, activated, failed;
+    public GameObject alarm, activated;
 
     private void Start() {
         // Assign player transform
@@ -38,6 +38,7 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
     public void Activate() {
         isActive = true;
         /// Set indicator to be active
+        Instantiate(alarm);
     }
 
     // Set the interactable to not be active
@@ -64,5 +65,10 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
 
     public void OnRaycastExit() {
         isFocus = false;
+    }
+
+    public void PlayFail()
+    {
+        Instantiate(failed);
     }
 }

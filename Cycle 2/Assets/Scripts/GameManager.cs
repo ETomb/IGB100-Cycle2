@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour {
     List<Interactable> activeControllers = new List<Interactable> { };
     Color lerpedColour;
 
+    public GameObject failsound;
+
     private void Awake() {
         //Check if instance already exists
         if (instance == null)
@@ -177,6 +179,8 @@ public class GameManager : MonoBehaviour {
         foreach (Interactable controller in activeControllers) {
             DeactivateController(controller);
         }
+        //Play fail sound
+        Instantiate(failsound);
     }
 
     // Randomly select a specifies amount of controllers

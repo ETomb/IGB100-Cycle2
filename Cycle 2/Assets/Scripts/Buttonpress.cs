@@ -8,6 +8,7 @@ public class ButtonPress : Interactable {
         base.Interact(distance);
         if (distance <= radius)
         {
+            Instantiate(activated);
             GameManager.instance.DeactivateController(this);
             /// Set indicator to be inactive
         }
