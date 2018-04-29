@@ -59,6 +59,21 @@ public class KeyTerminal : Interactable {
         base.Activate();
     }
 
+    public override void Deactivate() {
+        // Reset the input index
+        inputIndex = 0;
+        // Reset boolean
+        isInteracting = false;
+        // Disable textboxes
+        displayText.SetActive(false);
+        inputText.SetActive(false);
+        underscoreText.SetActive(false);
+        // Clear lists
+        sequence.Clear();
+        inputSequence.Clear();
+        inputSeqReset.Clear();
+    }
+
     public override void Interact(float distance) {
         // Set boolean to true
         if (isActive && distance <= radius)
@@ -115,18 +130,6 @@ public class KeyTerminal : Interactable {
     void CheckSequence() {
         // Check if the input sequence is equivalent to the target sequence
         if (inputSequence.SequenceEqual(sequence)) {
-            // Reset the input index
-            inputIndex = 0;
-            // Reset boolean
-            isInteracting = false;
-            // Disable textboxes
-            displayText.SetActive(false);
-            inputText.SetActive(false);
-            underscoreText.SetActive(false);
-            // Clear lists
-            sequence.Clear();
-            inputSequence.Clear();
-            inputSeqReset.Clear();
             // Deactivate this
             GameManager.instance.DeactivateController(this);
         }

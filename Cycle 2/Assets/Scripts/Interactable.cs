@@ -43,7 +43,7 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
     }
 
     // Set the interactable to not be active
-    public void Deactivate() {
+    public virtual void Deactivate() {
         isActive = false;
     }
 
