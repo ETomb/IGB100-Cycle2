@@ -11,10 +11,11 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
 
     public bool isActive = false;
     bool isFocus = false;
-    GameObject player;
+
+    [HideInInspector] public GameObject player;
     public GameObject alarm, activated;
 
-    private void Start() {
+    public virtual void Start() {
         // Assign player transform
         player = GameObject.FindGameObjectWithTag("Player").gameObject;
     }
@@ -35,7 +36,7 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
     }
 
     // Set the interactable to be active
-    public void Activate() {
+    public virtual void Activate() {
         isActive = true;
         /// Set indicator to be active
         Instantiate(alarm);

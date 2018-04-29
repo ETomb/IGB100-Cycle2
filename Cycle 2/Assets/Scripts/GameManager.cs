@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
 
     [SerializeField] Renderer flightBackgroundRenderer;
-    [SerializeField] float colourChangeSpeed = 1f;
+    [SerializeField] float colourChangeSpeed = 0.5f;
     [SerializeField] Color[] materialColourStages;
     [SerializeField] Interactable[] interactableControllers;
     [SerializeField] float initialTimingDelay = 0;
