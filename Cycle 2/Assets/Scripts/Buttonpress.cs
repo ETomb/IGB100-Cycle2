@@ -12,9 +12,4 @@ public class ButtonPress : Interactable {
             /// Set indicator to be inactive
         }
     }
-
-    public override void Tooltip(bool active) {
-        tooltipText.GetComponent<Text>().text = defaultTooltip;
-        base.Tooltip(active);
-    }
 }
