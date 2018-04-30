@@ -60,7 +60,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Alarm5Mat
-    second: {fileID: 2100000, guid: 0f01efa0e7f60264cb665282112c976d, type: 2}
+    second: {fileID: 2100000, guid: f01db7522efd41b4faee586ba992d483, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
