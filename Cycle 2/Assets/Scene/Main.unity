@@ -342,14 +342,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4560229029074b856f946a33daedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
+  radius: 1.3
   _distance: 0
-  interactionTransform: {fileID: 0}
+  interactionTransform: {fileID: 515502371}
   isActive: 0
   player: {fileID: 0}
-  alarm: {fileID: 0}
-  activated: {fileID: 0}
-  _light: {fileID: 0}
+  alarm: {fileID: 1690345616646034, guid: a450208db99056443b1c5ccdce80f5c9, type: 2}
+  activated: {fileID: 1708110860137430, guid: 850c9011331bbc44599a749a9c88badc, type: 2}
+  _light: {fileID: 118334151}
   tooltipText: {fileID: 0}
   defaultTooltip: Press 'E' to interact
 --- !u!1 &43443225
@@ -1146,6 +1146,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 83443563}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &84038478 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1907816602659918, guid: a983b7e1ee8de654fad778d354b6d9c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1684072090}
 --- !u!1 &91686341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,6 +1429,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 107853621}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &118334151 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1907816602659918, guid: a983b7e1ee8de654fad778d354b6d9c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1800749915}
 --- !u!1 &121769051
 GameObject:
   m_ObjectHideFlags: 0
@@ -2232,14 +2242,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4560229029074b856f946a33daedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
+  radius: 1.3
   _distance: 0
-  interactionTransform: {fileID: 0}
+  interactionTransform: {fileID: 1038330205}
   isActive: 0
   player: {fileID: 0}
-  alarm: {fileID: 0}
-  activated: {fileID: 0}
-  _light: {fileID: 0}
+  alarm: {fileID: 1690345616646034, guid: a450208db99056443b1c5ccdce80f5c9, type: 2}
+  activated: {fileID: 1708110860137430, guid: 850c9011331bbc44599a749a9c88badc, type: 2}
+  _light: {fileID: 567534810}
   tooltipText: {fileID: 0}
   defaultTooltip: Press 'E' to interact
 --- !u!1 &237993045
@@ -2448,6 +2458,16 @@ MonoBehaviour:
   - {r: 0.047058824, g: 0.37254903, b: 0.5019608, a: 1}
   - {r: 0, g: 0, b: 0, a: 1}
   interactableControllers:
+  - {fileID: 477747265}
+  - {fileID: 578922080}
+  - {fileID: 1995225961}
+  - {fileID: 1833197379}
+  - {fileID: 264187629}
+  - {fileID: 1212165404}
+  - {fileID: 605888416}
+  - {fileID: 1045072156}
+  - {fileID: 226042700}
+  - {fileID: 37705584}
   - {fileID: 60562572}
   - {fileID: 786754357}
   - {fileID: 1716012124}
@@ -2455,18 +2475,18 @@ MonoBehaviour:
   initialTimingDelay: 10
   currentStageIndex: 0
   stageEndTimings:
-  - 20
-  - 30
-  - 70
+  - 60
+  - 120
+  - 180
   stageActivationRates:
-  - 5
-  - 5
-  - 5
+  - 10
+  - 10
+  - 10
   stageFailureTimings:
-  - 5
-  - 5
-  - 5
-  gameLength: 296
+  - 13
+  - 12
+  - 11
+  gameLength: 240
   failIndicators:
   - {fileID: 965775203}
   - {fileID: 2004291310}
@@ -2889,6 +2909,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 276373303}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &277077742 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: 302119aaca279a743a62ceb0eba9ad44, type: 3}
+  m_PrefabInternal: {fileID: 2049012976}
 --- !u!4 &292504652 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400006, guid: 8016e6f8c5a6599478391e941f5c0821, type: 3}
@@ -3783,14 +3807,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4560229029074b856f946a33daedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
+  radius: 1.3
   _distance: 0
-  interactionTransform: {fileID: 0}
+  interactionTransform: {fileID: 1441707725}
   isActive: 0
   player: {fileID: 0}
-  alarm: {fileID: 0}
-  activated: {fileID: 0}
-  _light: {fileID: 0}
+  alarm: {fileID: 1690345616646034, guid: a450208db99056443b1c5ccdce80f5c9, type: 2}
+  activated: {fileID: 1708110860137430, guid: 850c9011331bbc44599a749a9c88badc, type: 2}
+  _light: {fileID: 2060475348}
   tooltipText: {fileID: 0}
   defaultTooltip: Press 'E' to interact
 --- !u!1 &478760585
@@ -4108,6 +4132,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 508458307}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &515502371 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: 302119aaca279a743a62ceb0eba9ad44, type: 3}
+  m_PrefabInternal: {fileID: 1948983746}
+--- !u!1 &567534810 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1907816602659918, guid: a983b7e1ee8de654fad778d354b6d9c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1243418982}
 --- !u!1 &569283983
 GameObject:
   m_ObjectHideFlags: 0
@@ -4669,14 +4702,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4560229029074b856f946a33daedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
+  radius: 1.3
   _distance: 0
-  interactionTransform: {fileID: 0}
+  interactionTransform: {fileID: 277077742}
   isActive: 0
   player: {fileID: 0}
-  alarm: {fileID: 0}
-  activated: {fileID: 0}
-  _light: {fileID: 0}
+  alarm: {fileID: 1690345616646034, guid: a450208db99056443b1c5ccdce80f5c9, type: 2}
+  activated: {fileID: 1708110860137430, guid: 850c9011331bbc44599a749a9c88badc, type: 2}
+  _light: {fileID: 1877902041}
   tooltipText: {fileID: 0}
   defaultTooltip: Press 'E' to interact
 --- !u!1 &607312390
@@ -7826,6 +7859,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1029384297}
+--- !u!4 &1038330205 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: 302119aaca279a743a62ceb0eba9ad44, type: 3}
+  m_PrefabInternal: {fileID: 1022194340}
 --- !u!1 &1039994961
 GameObject:
   m_ObjectHideFlags: 0
@@ -7963,14 +8000,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4560229029074b856f946a33daedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
+  radius: 1.3
   _distance: 0
-  interactionTransform: {fileID: 0}
+  interactionTransform: {fileID: 2080772971}
   isActive: 0
   player: {fileID: 0}
-  alarm: {fileID: 0}
-  activated: {fileID: 0}
-  _light: {fileID: 0}
+  alarm: {fileID: 1690345616646034, guid: a450208db99056443b1c5ccdce80f5c9, type: 2}
+  activated: {fileID: 1708110860137430, guid: 850c9011331bbc44599a749a9c88badc, type: 2}
+  _light: {fileID: 84038478}
   tooltipText: {fileID: 0}
   defaultTooltip: Press 'E' to interact
 --- !u!1 &1059258502
@@ -9108,7 +9145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec4560229029074b856f946a33daedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
+  radius: 1.5
   _distance: 0
   interactionTransform: {fileID: 292504652}
   isActive: 0
@@ -11077,6 +11114,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1427172888}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1441707725 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: 302119aaca279a743a62ceb0eba9ad44, type: 3}
+  m_PrefabInternal: {fileID: 1683212577}
 --- !u!1 &1461218874
 GameObject:
   m_ObjectHideFlags: 0
@@ -14291,7 +14332,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: eb5507901df60374c8eb2ec074dbde23, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e946d954f4ae4484faff1dc83cefd849, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
@@ -14817,6 +14858,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1907816602659918, guid: a983b7e1ee8de654fad778d354b6d9c8,
     type: 2}
   m_PrefabInternal: {fileID: 1852822763}
+--- !u!1 &1877902041 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1907816602659918, guid: a983b7e1ee8de654fad778d354b6d9c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 185849028}
 --- !u!1 &1882872869
 GameObject:
   m_ObjectHideFlags: 0
@@ -15239,6 +15285,16 @@ Prefab:
         type: 2}
       propertyPath: m_Volume
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114640650364509320, guid: 4bd7766ff597fa84e8698c1900d7ae63,
+        type: 2}
+      propertyPath: encumSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114640650364509320, guid: 4bd7766ff597fa84e8698c1900d7ae63,
+        type: 2}
+      propertyPath: m_RunstepLenghten
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4bd7766ff597fa84e8698c1900d7ae63, type: 2}
@@ -15917,6 +15973,15 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73bd821dd93d9204a8e63bf4e083a68b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2060475348 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1907816602659918, guid: a983b7e1ee8de654fad778d354b6d9c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 966312134}
+--- !u!4 &2080772971 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: 302119aaca279a743a62ceb0eba9ad44, type: 3}
+  m_PrefabInternal: {fileID: 68929658}
 --- !u!1 &2123112629
 GameObject:
   m_ObjectHideFlags: 0
