@@ -59,15 +59,13 @@ namespace Characters
 
             RaycastControl();
 
-            if (Input.GetKeyDown(KeyCode.E)) {
-                if (interactable == null) {
-                    return;
-                }
-
+            if (interactable != null) {
                 Vector3 closestPoint = gameObject.GetComponent<CharacterController>().ClosestPoint(interactable.interactionTransform.position);
-                float distance = Vector3.Distance(closestPoint, interactable.interactionTransform.position);
+                interactable._distance = Vector3.Distance(closestPoint, interactable.interactionTransform.position);
 
-                interactable.Interact(distance);
+                if (Input.GetKeyDown(KeyCode.E)) {
+                    interactable.Interact();
+                }
             }
         }
 

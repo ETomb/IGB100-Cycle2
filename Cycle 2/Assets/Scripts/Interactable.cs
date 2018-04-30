@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 [SerializeField]
 public class Interactable : MonoBehaviour, IRaycastEventHandler {
 
-    public float radius = 1f;   // reach radius
+    public float radius = 1f;                // reach radius
+    public float _distance;                  // distance of the player
     public Transform interactionTransform;   // transform of the interaction point
 
     public bool isActive = false;
@@ -14,25 +16,36 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
 
     [HideInInspector] public GameObject player;
     public GameObject alarm, activated;
+    public Text tooltipText;
+    public string defaultTooltip = "Press 'E' to interact";
 
     public virtual void Start() {
         // Assign player transform
         player = GameObject.FindGameObjectWithTag("Player").gameObject;
+        // Assign tooltip text
+        tooltipText = GameObject.Find("TooltipText").GetComponent<Text>();
+    }
+
+    public virtual void Update() {
+        if (isActive && _distance <= radius) {
+            Tooltip(true);
+        } else {
+            Tooltip(false);
+        }
     }
 
     // This method is meant to be overwritten
-    public virtual void Interact(float distance) {
-        // If the object isn't active or out of range, do nothing
-        if (!isActive || distance > radius) {
-            return;
-        }
-
+    public virtual void Interact() {
         Debug.Log("Interacting with " + transform.name);
     }
 
     // This method is meant to be overwritten
-    public virtual void Tooltip() {
-        Debug.Log("Tooltip active for" + interactionTransform.name);
+    public virtual void Tooltip(bool active) {
+        // Set the active state of the tooltip
+        tooltipText.enabled = active;
+        if (active) {
+            Debug.Log("Tooltip active for " + transform.name);
+        }
     }
 
     // Set the interactable to be active
@@ -45,12 +58,6 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
     // Set the interactable to not be active
     public virtual void Deactivate() {
         isActive = false;
-    }
-
-    private void Update() {
-        // Check if the object is able to be interacted with
-        if (isActive && isFocus) {
-        }
     }
 
     // Debugging Gizmo

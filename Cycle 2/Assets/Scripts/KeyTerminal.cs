@@ -12,7 +12,6 @@ public class KeyTerminal : Interactable {
     [SerializeField] GameObject displayText;
     [SerializeField] GameObject underscoreText;
 
-    float _distance;                                        // The distance the player is from the terminal
     List<string> sequence = new List<string> { };           // The number sequence the player needs to input
     List<string> inputSequence = new List<string> { };      // The sequence the player is inputing
     List<string> inputSeqReset = new List<string> { };      // Copy of the initial input sequence
@@ -40,7 +39,9 @@ public class KeyTerminal : Interactable {
         underscoreText.SetActive(false);
     }
 
-    private void Update() {
+    public override void Update() {
+        base.Update();
+
         if (isActive && isInteracting) {
             InteractionCheck();
             CheckInput();
@@ -60,6 +61,7 @@ public class KeyTerminal : Interactable {
     }
 
     public override void Deactivate() {
+        base.Deactivate();
         // Reset the input index
         inputIndex = 0;
         // Reset boolean
@@ -74,12 +76,12 @@ public class KeyTerminal : Interactable {
         inputSeqReset.Clear();
     }
 
-    public override void Interact(float distance) {
+    public override void Interact() {
         // Set boolean to true
-        if (isActive && distance <= radius)
+        if (isActive && _distance <= radius)
             isInteracting = true;
         // Interact as normal
-        base.Interact(distance);
+        base.Interact();
     }
 
     void GenerateSequence() {
@@ -101,10 +103,6 @@ public class KeyTerminal : Interactable {
     }
 
     void InteractionCheck() {
-        // Find the vector position of the closest point on the player
-        Vector3 closestPoint = player.GetComponent<CharacterController>().ClosestPoint(interactionTransform.position);
-        // Find distance to the player
-        _distance = Vector3.Distance(closestPoint, interactionTransform.position);
         // Check if this distance is not within the interaction radius
         if (_distance > radius) {
             // Set boolean to false
