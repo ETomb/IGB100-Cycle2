@@ -9,6 +9,10 @@ public class Indicator : MonoBehaviour {
     {
         gameObject.SetActive(false);
     }
+    public void TurnOn()
+    {
+        gameObject.SetActive(true);
+    }
     public void DestroySelf()
     {
         gameObject.SetActive(false);
