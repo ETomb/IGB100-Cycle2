@@ -16,7 +16,7 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
 
     [HideInInspector] public GameObject player;
     public GameObject alarm, activated;
-    public GameObject light;
+    public GameObject _light;
     public Text tooltipText;
     public string defaultTooltip = "Press 'E' to interact";
 
@@ -28,7 +28,7 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
     }
 
     public virtual void Update() {
-        if (isActive && _distance <= radius) {
+        if (isActive && isFocus && _distance <= radius) {
             Tooltip(true);
         } else {
             Tooltip(false);
@@ -53,14 +53,14 @@ public class Interactable : MonoBehaviour, IRaycastEventHandler {
     public virtual void Activate() {
         isActive = true;
         /// Set indicator to be active
-        light.GetComponent<Indicator>().TurnOn();
+        _light.GetComponent<Indicator>().TurnOn();
         Instantiate(alarm);
     }
 
     // Set the interactable to not be active
     public virtual void Deactivate() {
         isActive = false;
-        light.GetComponent<Indicator>().DestroySelf();
+        _light.GetComponent<Indicator>().DestroySelf();
     }
 
     // Debugging Gizmo

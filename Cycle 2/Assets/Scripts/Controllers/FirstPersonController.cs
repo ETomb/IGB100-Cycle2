@@ -9,7 +9,7 @@ namespace Characters
     [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
-        [SerializeField] private bool isWalking;
+        public bool notEncum = true;
         [SerializeField] private float walkSpeed;
         [SerializeField] private float encumSpeed;
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
@@ -63,7 +63,7 @@ namespace Characters
                 Vector3 closestPoint = gameObject.GetComponent<CharacterController>().ClosestPoint(interactable.interactionTransform.position);
                 interactable._distance = Vector3.Distance(closestPoint, interactable.interactionTransform.position);
 
-                if (Input.GetKeyDown(KeyCode.E)) {
+                if (Input.GetAxisRaw("Use") == 1 && notEncum) {
                     interactable.Interact();
                 }
             }
@@ -108,7 +108,7 @@ namespace Characters
 
         private void ProgressStepCycle(float speed) {
             if (controller.velocity.sqrMagnitude > 0 && (input.x != 0 || input.y != 0)) {
-                stepCycle += (controller.velocity.magnitude + (speed*(isWalking ? 1f : m_RunstepLenghten)))*
+                stepCycle += (controller.velocity.magnitude + (speed*(notEncum ? 1f : m_RunstepLenghten)))*
                              Time.fixedDeltaTime;
             }
 
@@ -138,13 +138,10 @@ namespace Characters
             float horizontal = CrossPlatformInputManager.GetAxisRaw("Horizontal");
             float vertical = CrossPlatformInputManager.GetAxisRaw("Vertical");
 
-            bool waswalking = isWalking;
+            bool waswalking = notEncum;
 
-            // On standalone builds, walk/run speed is modified by a key press.
-            // keep track of whether or not the character is walking or running
-            isWalking = !Input.GetKey(KeyCode.LeftShift);
             // set the desired speed to be walking or running
-            speed = isWalking ? walkSpeed : encumSpeed;
+            speed = notEncum ? walkSpeed : encumSpeed;
             input = new Vector2(horizontal, vertical);
 
             // normalize input if it exceeds 1 in combined length:
