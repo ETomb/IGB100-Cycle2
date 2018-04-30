@@ -42,7 +42,6 @@ public class ChairBehaviour : Interactable {
         if (beingCarried) {
             // Behaviour for when the carried object collides with another
             if (touched) {
-                GetComponent<Rigidbody>().isKinematic = false;
                 transform.parent = null;
                 beingCarried = false;
                 touched = false;
@@ -50,7 +49,6 @@ public class ChairBehaviour : Interactable {
             }
             // Place behaviour
             if (Input.GetAxisRaw("Throw") == 1) {
-                GetComponent<Rigidbody>().isKinematic = false;
                 transform.parent = null;
                 beingCarried = false;
                 player.GetComponent<Characters.FirstPersonController>().notEncum = true;
