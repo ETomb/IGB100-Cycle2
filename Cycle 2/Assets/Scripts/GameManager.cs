@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour {
 
     private void Update() {
         // Stage switching
-        if (Time.time >= stageEndTimings[currentStageIndex]) {
+        if (Time.timeSinceLevelLoad >= stageEndTimings[currentStageIndex]) {
             if (currentStageIndex < stageEndTimings.Length - 1) {
                 currentStageIndex++;
             } else {
@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour {
             }
         }
 
-        if (Time.time >= initialTimingDelay) {
+        if (Time.timeSinceLevelLoad >= initialTimingDelay) {
             // Update colour of the flight background
             lerpedColour = ColourShift(lerpedColour, materialColourStages[currentStageIndex + 1]);
             flightBackgroundRenderer.material.color = lerpedColour;
@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour {
            
 
             // Check for failure at set rate
-            if (Time.time >= failTime && controllersAreActive)
+            if (Time.timeSinceLevelLoad >= failTime && controllersAreActive)
                 Fail();         
         }
 

@@ -2486,7 +2486,7 @@ MonoBehaviour:
   - 13
   - 12
   - 11
-  gameLength: 296
+  gameLength: 240
   failIndicators:
   - {fileID: 965775203}
   - {fileID: 2004291310}
